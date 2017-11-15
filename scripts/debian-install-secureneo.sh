@@ -1,3 +1,6 @@
+#running the script:
+#wget -O - https://github.com/ITSVision/SecureNEO/blob/master/scripts/debian-install-secureneo.sh | bash
+
 # Update and upgrade
 apk update && apk upgrade
 
@@ -6,13 +9,14 @@ apt-get install git curl php7.0-cli php7.0-dev php-pear php7.0-curl php7.0-mcryp
 
 #install scrypt
 printf "\n" | pecl install scrypt
-echo "extension=scrypt.so" > /etc/php7/php.ini
+echo "extension=scrypt.so" >> /etc/php/7.0/cli/php.ini
+
+#switch to homedir
+cd /home/neo/
 
 #clone the git
 git clone https://github.com/ITSVision/neo-php.git
 
-#switch to homedir
-cd /home/neo/
 
 #start the script
 echo "php /home/neo/neo-php/examples/cli-create-wallet-interactive.php" > /home/neo/.bash_login
