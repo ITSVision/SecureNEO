@@ -2,7 +2,7 @@
 apk update && apk upgrade
 
 #add dependencies
-apt-get install git curl php7.0 php7.0-dev php-pear php7.0-curl php7.0-mcrypt php7.0-mbstring php7.0-gmp php7.0-bcmath g++ make util-linux
+apt-get install git curl php7.0-cli php7.0-dev php-pear php7.0-curl php7.0-mcrypt php7.0-mbstring php7.0-gmp php7.0-bcmath g++ make util-linux
 
 #install scrypt
 printf "\n" | pecl install scrypt
